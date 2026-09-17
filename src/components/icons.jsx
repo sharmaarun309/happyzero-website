@@ -105,3 +105,80 @@ export function QmsIcon(props) {
     </svg>
   )
 }
+
+export function PersonIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="8" r="3.5" />
+      <path d="M4.5 20c0-4.1 3.4-7 7.5-7s7.5 2.9 7.5 7" />
+    </svg>
+  )
+}
+
+export function GearIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="3.2" />
+      <path d="M12 3.5v2.4M12 18.1v2.4M4.6 7.2l2.1 1.2M17.3 15.6l2.1 1.2M4.6 16.8l2.1-1.2M17.3 8.4l2.1-1.2M3.5 12h2.4M18.1 12h2.4" />
+    </svg>
+  )
+}
+
+export function SparkleIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 3.5 13.6 9l5.4 1.6-5.4 1.6L12 17.7 10.4 12.2 5 10.6 10.4 9 12 3.5Z" />
+      <path d="M19 16.5v3M17.5 18h3" />
+    </svg>
+  )
+}
+
+export function SunIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+    </svg>
+  )
+}
+
+export function DocumentIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M7 3.5h7l3 3v14H7Z" />
+      <path d="M14 3.5v3h3" />
+      <line x1="9.5" y1="12" x2="14.5" y2="12" />
+      <line x1="9.5" y1="15.5" x2="14.5" y2="15.5" />
+    </svg>
+  )
+}
+
+export function PersonAddIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="10" cy="8" r="3.2" />
+      <path d="M3.5 20c0-3.7 2.9-6.3 6.5-6.3s6.5 2.6 6.5 6.3" />
+      <line x1="18" y1="4.5" x2="18" y2="9.5" />
+      <line x1="15.5" y1="7" x2="20.5" y2="7" />
+    </svg>
+  )
+}
+
+export function BarChartIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <line x1="5" y1="20" x2="5" y2="13" />
+      <line x1="12" y1="20" x2="12" y2="8" />
+      <line x1="19" y1="20" x2="19" y2="4" />
+    </svg>
+  )
+}
+
+export function PlayIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="9.5" />
+      <path d="M10 8.5 15.5 12 10 15.5Z" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
