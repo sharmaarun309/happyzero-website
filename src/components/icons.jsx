@@ -258,3 +258,22 @@ export function BadgeIcon(props) {
     </svg>
   )
 }
+
+export function BookIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 6.5c-1.6-1.3-3.8-2-6.5-2v13c2.7 0 4.9.7 6.5 2 1.6-1.3 3.8-2 6.5-2v-13c-2.7 0-4.9.7-6.5 2Z" />
+      <line x1="12" y1="6.5" x2="12" y2="19.5" />
+    </svg>
+  )
+}
+
+export function RefreshIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M4.5 12a7.5 7.5 0 0 1 12.6-5.4L19 8.5" />
+      <path d="M19.5 12a7.5 7.5 0 0 1-12.6 5.4L5 15.5" />
+      <path d="M19 5.5v3h-3M5 18.5v-3h3" />
+    </svg>
+  )
+}
