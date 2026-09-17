@@ -12,7 +12,7 @@ import YOA from './pages/YOA'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="yoa" element={<YOA />} />
         <Route element={<Layout />}>
