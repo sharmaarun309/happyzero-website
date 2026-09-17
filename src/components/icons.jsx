@@ -303,3 +303,61 @@ export function TrophyIcon(props) {
     </svg>
   )
 }
+
+export function BoxIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 3.5 20 8v8l-8 4.5L4 16V8l8-4.5Z" />
+      <path d="M4 8 12 12.5 20 8M12 12.5v8" />
+    </svg>
+  )
+}
+
+export function TruckIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M3 6.5h10v9H3z" />
+      <path d="M13 10h4l3 3.2v2.3h-7z" />
+      <circle cx="7" cy="17.5" r="1.6" />
+      <circle cx="16.5" cy="17.5" r="1.6" />
+    </svg>
+  )
+}
+
+export function StackIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 3.5 20 7.5 12 11.5 4 7.5 12 3.5Z" />
+      <path d="M4 12l8 4 8-4M4 16.5l8 4 8-4" />
+    </svg>
+  )
+}
+
+export function XCircleIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="9" />
+      <line x1="9" y1="9" x2="15" y2="15" />
+      <line x1="15" y1="9" x2="9" y2="15" />
+    </svg>
+  )
+}
+
+export function QuoteIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M9.5 6.5c-2.8 0-5 2.2-5 5v6h6v-6h-3.2c0-1.7 1.4-3.1 3.1-3.1L9.5 6.5Z" />
+      <path d="M19.5 6.5c-2.8 0-5 2.2-5 5v6h6v-6h-3.2c0-1.7 1.4-3.1 3.1-3.1l-0.9-1.9Z" />
+    </svg>
+  )
+}
+
+export function ChipIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="7" y="7" width="10" height="10" rx="1.2" />
+      <rect x="10" y="10" width="4" height="4" />
+      <path d="M9 3.5v2M15 3.5v2M9 18.5v2M15 18.5v2M3.5 9h2M3.5 15h2M18.5 9h2M18.5 15h2" />
+    </svg>
+  )
+}
