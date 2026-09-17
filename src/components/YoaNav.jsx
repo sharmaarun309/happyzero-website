@@ -28,7 +28,7 @@ function Logo() {
 function DemoButton({ className = '' }) {
   return (
     <Link
-      to="/yoa"
+      to="/contact"
       className={`inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-700 ${className}`}
     >
       Request a Demo
