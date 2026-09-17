@@ -285,3 +285,21 @@ export function ShieldIcon(props) {
     </svg>
   )
 }
+
+export function WrenchIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4.5 16.5a1.8 1.8 0 0 0 2.5 2.5l4.8-4.8a4 4 0 0 1 5.4-5.4l-2.6 2.6-1.8-1.8 2.6-2.6Z" />
+    </svg>
+  )
+}
+
+export function TrophyIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M7 4.5h10v4a5 5 0 0 1-10 0v-4Z" />
+      <path d="M7 5.5H4v1.5a3 3 0 0 0 3 3M17 5.5h3v1.5a3 3 0 0 1-3 3" />
+      <path d="M12 13.5v3M9 19.5h6M9.5 19.5l.5-2.5h4l.5 2.5" />
+    </svg>
+  )
+}
