@@ -4,6 +4,7 @@ import {
   BadgeIcon,
   BarChartIcon,
   CheckIcon,
+  ChipIcon,
   DocumentIcon,
   GearIcon,
   PersonAddIcon,
@@ -13,6 +14,7 @@ import {
   RefreshIcon,
   SearchScopeIcon,
   ShieldIcon,
+  SparkleIcon,
   TargetIcon,
 } from '../components/icons'
 import { ArrowLink, SectionLabel } from '../components/ui'
@@ -90,6 +92,13 @@ const useCases = [
     copy: 'Strengthen your supply chain.',
     imageClass: 'from-orange-200 to-orange-50',
   },
+]
+
+const roadmapItems = [
+  'Finding information faster',
+  'Preparing for audits',
+  'Monitoring actions',
+  'Surfacing risks earlier',
 ]
 
 const impactOutcomes = [
@@ -411,6 +420,62 @@ function DigitalQMS() {
                   <span className="text-xs font-medium text-neutral-600">{label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Human + Digital Quality */}
+      <section className="px-5 py-10 md:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-2xl bg-sky-50 px-6 py-10 text-center md:px-16 md:py-14">
+            <h2 className="mx-auto max-w-2xl text-[26px] font-bold leading-tight text-[#0A0A0A] md:text-[32px]">
+              Technology manages the system. People improve it.
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-sm text-neutral-600 md:text-base">
+              Digital QMS gives your quality teams the visibility, structure
+              and evidence they need to spend less time chasing information
+              and more time improving the business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Future AI Layer */}
+      <section className="px-5 py-10 md:px-8">
+        <div className="mx-auto max-w-6xl">
+          <div className="rounded-2xl border border-dashed border-sky-200 bg-white p-6 md:p-10">
+            <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+              <div className="max-w-xl">
+                <div className="flex items-center gap-2">
+                  <SectionLabel>What&rsquo;s Next</SectionLabel>
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-600">
+                    <SparkleIcon width={12} height={12} strokeWidth={2} />
+                    On the Roadmap
+                  </span>
+                </div>
+                <h2 className="mt-3 text-[26px] font-semibold leading-tight text-neutral-500 md:text-[32px]">
+                  Quality work, increasingly intelligent.
+                </h2>
+                <p className="mt-4 text-sm text-neutral-500">
+                  From finding information to preparing audits, monitoring
+                  actions and surfacing risks — AI can help quality teams
+                  move from manual administration to higher-value
+                  improvement work.
+                </p>
+              </div>
+
+              <div className="flex shrink-0 flex-col gap-3">
+                {roadmapItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-neutral-50 px-4 py-2.5"
+                  >
+                    <ChipIcon width={16} height={16} strokeWidth={1.6} className="shrink-0 text-neutral-400" />
+                    <span className="text-sm text-neutral-500">{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
