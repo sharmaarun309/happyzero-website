@@ -277,3 +277,11 @@ export function RefreshIcon(props) {
     </svg>
   )
 }
+
+export function ShieldIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 3.5 5 6v5.5c0 4.4 3 7.6 7 9 4-1.4 7-4.6 7-9V6l-7-2.5Z" />
+    </svg>
+  )
+}
