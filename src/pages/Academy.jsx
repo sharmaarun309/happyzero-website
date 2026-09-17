@@ -11,6 +11,7 @@ import {
   PersonAddIcon,
   PersonIcon,
   RefreshIcon,
+  TalentIcon,
 } from '../components/icons'
 import { ArrowLink, SectionLabel } from '../components/ui'
 
@@ -86,6 +87,13 @@ const impactStats = [
   { value: '0', label: 'Defects' },
   { value: '0', label: 'Customer Complaints' },
   { value: 'Higher', label: 'Productivity', highlight: true },
+]
+
+const talentConnectionSteps = [
+  { name: 'Talent', copy: 'Know what you need.', Icon: TalentIcon },
+  { name: 'Academy', copy: 'Build the capability.', Icon: AcademyIcon },
+  { name: 'Evidence', copy: 'Show what changed.', Icon: BadgeIcon },
+  { name: 'Better Performance', copy: '', Icon: BarChartIcon },
 ]
 
 const learners = [
@@ -444,6 +452,38 @@ function Academy() {
                 </span>
                 <h3 className="mt-4 text-sm font-bold text-[#0A0A0A]">{name}</h3>
                 <p className="mt-2 text-sm text-neutral-500">{copy}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Talent Connection */}
+      <section className="px-5 py-10 md:px-8">
+        <div className="mx-auto max-w-6xl">
+          <SectionLabel>Talent Connection</SectionLabel>
+          <h2 className="mt-3 text-[28px] font-bold leading-tight text-[#0A0A0A] md:text-[34px]">
+            From Skill Gap to Skill Growth.
+          </h2>
+
+          <div className="mt-8 flex flex-col gap-3 md:flex-row md:items-stretch md:gap-2">
+            {talentConnectionSteps.map(({ name, copy, Icon }, index) => (
+              <div key={name} className="flex items-center gap-2 md:flex-1">
+                <div className="flex-1 rounded-2xl bg-orange-50 p-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-[#FF6A00]">
+                    <Icon width={20} height={20} strokeWidth={1.8} />
+                  </span>
+                  <p className="mt-3 text-base font-bold text-[#0A0A0A]">{name}</p>
+                  {copy && <p className="mt-1 text-sm text-neutral-500">{copy}</p>}
+                </div>
+                {index < talentConnectionSteps.length - 1 && (
+                  <ArrowRightIcon
+                    width={18}
+                    height={18}
+                    strokeWidth={2}
+                    className="hidden shrink-0 text-neutral-300 md:block"
+                  />
+                )}
               </div>
             ))}
           </div>
