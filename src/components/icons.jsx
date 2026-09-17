@@ -361,3 +361,80 @@ export function ChipIcon(props) {
     </svg>
   )
 }
+
+export function ChatIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M4 5.5h16v10H9l-4 3.5v-3.5H4Z" />
+    </svg>
+  )
+}
+
+export function LightbulbIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M9 18h6M10 20.5h4" />
+      <path d="M12 3.5a6 6 0 0 0-3.5 10.9c.6.45 1 1.2 1 2.1h5c0-.9.4-1.65 1-2.1A6 6 0 0 0 12 3.5Z" />
+    </svg>
+  )
+}
+
+export function MailIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3.5" y="5.5" width="17" height="13" rx="1.5" />
+      <path d="M4.5 6.5 12 12.5l7.5-6" />
+    </svg>
+  )
+}
+
+export function PhoneIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M6 3.5h3l1.5 4-2 1.5a11 11 0 0 0 5.5 5.5l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 4.5 5.1 1.5 1.5 0 0 1 6 3.5Z" />
+    </svg>
+  )
+}
+
+export function PinIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M12 21s7-6.5 7-11.5a7 7 0 0 0-14 0C5 14.5 12 21 12 21Z" />
+      <circle cx="12" cy="9.5" r="2.5" />
+    </svg>
+  )
+}
+
+export function LinkedInIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3.5" y="3.5" width="17" height="17" rx="2" />
+      <line x1="7.5" y1="10.5" x2="7.5" y2="16.5" />
+      <circle cx="7.5" cy="7.3" r="0.2" fill="currentColor" />
+      <path d="M11 16.5v-3.7c0-1.3.8-2.1 2-2.1s2 .8 2 2.1v3.7" />
+      <line x1="11" y1="10.5" x2="11" y2="16.5" />
+    </svg>
+  )
+}
+
+export function GridIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="4" y="4" width="7" height="7" rx="1.2" />
+      <rect x="13" y="4" width="7" height="7" rx="1.2" />
+      <rect x="4" y="13" width="7" height="7" rx="1.2" />
+      <rect x="13" y="13" width="7" height="7" rx="1.2" />
+    </svg>
+  )
+}
+
+export function CalendarIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3.5" y="5" width="17" height="15" rx="1.5" />
+      <line x1="3.5" y1="9.5" x2="20.5" y2="9.5" />
+      <line x1="8" y1="3" x2="8" y2="7" />
+      <line x1="16" y1="3" x2="16" y2="7" />
+    </svg>
+  )
+}
