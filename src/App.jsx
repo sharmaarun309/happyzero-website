@@ -14,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="yoa" element={<YOA />} />
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="talent" element={<Talent />} />
@@ -23,7 +24,6 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="resources" element={<Resources />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="yoa" element={<YOA />} />
         </Route>
       </Routes>
     </BrowserRouter>
