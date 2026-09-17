@@ -182,3 +182,79 @@ export function PlayIcon(props) {
     </svg>
   )
 }
+
+export function CheckIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <polyline points="5 12.5 9.5 17 19 6.5" />
+    </svg>
+  )
+}
+
+export function ClockIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 7v5.5l4 2.2" />
+    </svg>
+  )
+}
+
+export function TargetIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="12" r="8.5" />
+      <circle cx="12" cy="12" r="4.5" />
+      <circle cx="12" cy="12" r="0.8" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+
+export function SearchScopeIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <line x1="20" y1="20" x2="15.3" y2="15.3" />
+    </svg>
+  )
+}
+
+export function FactoryIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M3.5 20V11l5 3.2V11l5 3.2V9l5 3.2V20Z" />
+      <line x1="3.5" y1="20" x2="20.5" y2="20" />
+      <path d="M18.5 9V5.5h2V9" />
+    </svg>
+  )
+}
+
+export function BrainIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M9 4.5a3 3 0 0 0-3 3v1a3 3 0 0 0-1.5 5.4A3 3 0 0 0 7 19h2" />
+      <path d="M15 4.5a3 3 0 0 1 3 3v1a3 3 0 0 1 1.5 5.4A3 3 0 0 1 17 19h-2" />
+      <path d="M9 4.5v14.5M15 4.5v14.5" />
+    </svg>
+  )
+}
+
+export function ToolboxIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <rect x="3" y="9" width="18" height="10.5" rx="1.5" />
+      <path d="M8.5 9V7a1.5 1.5 0 0 1 1.5-1.5h4A1.5 1.5 0 0 1 15.5 7v2" />
+      <line x1="3" y1="14" x2="21" y2="14" />
+      <line x1="10.5" y1="12.5" x2="13.5" y2="12.5" />
+    </svg>
+  )
+}
+
+export function BadgeIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <circle cx="12" cy="9.5" r="5.5" />
+      <path d="M8.5 14.2 7 21l5-2.5 5 2.5-1.5-6.8" />
+    </svg>
+  )
+}
