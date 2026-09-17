@@ -13,39 +13,7 @@ import {
   SunIcon,
   TalentIcon,
 } from '../components/icons'
-
-function SectionLabel({ children, align = 'left' }) {
-  return (
-    <p
-      className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-neutral-500 ${
-        align === 'right' ? 'justify-end' : ''
-      }`}
-    >
-      <span className="h-px w-4 bg-[#FF6A00]" />
-      {children}
-    </p>
-  )
-}
-
-function ArrowLink({ to, children }) {
-  return (
-    <Link
-      to={to}
-      className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0A0A0A] hover:text-[#FF6A00]"
-    >
-      {children}
-      <ArrowRightIcon width={16} height={16} strokeWidth={2.2} />
-    </Link>
-  )
-}
-
-function ArrowCircleButton() {
-  return (
-    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#0A0A0A] shadow-sm">
-      <ArrowRightIcon width={18} height={18} strokeWidth={2.2} />
-    </span>
-  )
-}
+import { ArrowCircleButton, ArrowLink, SectionLabel } from '../components/ui'
 
 const valueStrip = [
   { label: 'People Empowered', Icon: PersonIcon },
