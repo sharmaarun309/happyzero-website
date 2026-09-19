@@ -7,6 +7,8 @@ import DigitalQMS from './pages/DigitalQMS'
 import Services from './pages/Services'
 import SkillAssessment from './pages/services/SkillAssessment'
 import Training from './pages/services/Training'
+import GapAnalysis from './pages/services/GapAnalysis'
+import AuditOutsourcing from './pages/services/AuditOutsourcing'
 import Industries from './pages/Industries'
 import IndustriesAutomotive from './pages/IndustriesAutomotive'
 import About from './pages/About'
@@ -27,6 +29,8 @@ function App() {
           <Route path="services" element={<Services />} />
           <Route path="services/skill-assessment" element={<SkillAssessment />} />
           <Route path="services/training" element={<Training />} />
+          <Route path="services/gap-analysis" element={<GapAnalysis />} />
+          <Route path="services/audit-outsourcing" element={<AuditOutsourcing />} />
           <Route path="industries" element={<Industries />} />
           <Route path="industries/automotive" element={<IndustriesAutomotive />} />
           <Route path="about" element={<About />} />
