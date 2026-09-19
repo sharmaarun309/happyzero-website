@@ -46,7 +46,7 @@ function About() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>About HappyZero</SectionLabel>
 
-          <h1 className="mt-4 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             A More Capable Manufacturing <span className="text-[#FF6A00]">Tomorrow.</span>
           </h1>
 
@@ -114,7 +114,7 @@ function About() {
           <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
             <div>
               <SectionLabel>Our Philosophy</SectionLabel>
-              <p className="mt-4 text-[56px] font-extrabold leading-none tracking-tight text-[#0A0A0A] md:text-[80px]">
+              <p className="mt-4 text-[56px] font-extrabold leading-none tracking-[-0.02em] text-[#0A0A0A] md:text-[80px]">
                 ZWO<span className="text-[#FF6A00]">HI</span>
               </p>
               <p className="mt-2 text-lg font-semibold text-neutral-700 md:text-xl">
@@ -172,7 +172,7 @@ function About() {
                 <BrainIcon width={26} height={26} strokeWidth={1.6} />
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
+                <p className="text-sm font-medium tracking-normal text-neutral-500">
                   The 8th Waste
                 </p>
                 <p className="text-base font-bold text-[#FF6A00]">
@@ -213,7 +213,7 @@ function About() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-[#FF6A00]">
                   <PersonIcon width={20} height={20} strokeWidth={1.8} />
                 </span>
-                <p className="mt-3 text-xs font-bold uppercase tracking-widest text-neutral-500">
+                <p className="mt-3 text-sm font-medium tracking-normal text-neutral-500">
                   People Bring
                 </p>
                 <ul className="mt-2 space-y-1 text-sm text-neutral-600">
@@ -229,7 +229,7 @@ function About() {
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white">
                   <ChipIcon width={20} height={20} strokeWidth={1.8} />
                 </span>
-                <p className="mt-3 text-xs font-bold uppercase tracking-widest text-white/50">
+                <p className="mt-3 text-sm font-medium tracking-normal text-white/50">
                   AI Brings
                 </p>
                 <ul className="mt-2 space-y-1 text-sm text-white/80">

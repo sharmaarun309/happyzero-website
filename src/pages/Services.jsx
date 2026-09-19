@@ -114,7 +114,7 @@ function Services() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Our Services</SectionLabel>
 
-          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             Manufacturing Expertise, <span className="text-[#FF6A00]">Delivered.</span>
           </h1>
 

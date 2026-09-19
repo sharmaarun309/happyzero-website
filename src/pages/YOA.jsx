@@ -25,7 +25,7 @@ import {
 
 function Eyebrow({ children, className = '' }) {
   return (
-    <p className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 ${className}`}>
+    <p className={`flex items-center gap-2 text-sm font-medium tracking-normal text-slate-500 ${className}`}>
       <span className="h-px w-4 bg-blue-600" />
       {children}
     </p>
@@ -142,7 +142,7 @@ function YOA() {
           <div className="mx-auto max-w-6xl">
             <Eyebrow>YOA by HappyZero</Eyebrow>
 
-            <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-slate-900 md:text-[52px]">
+            <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-slate-900 md:text-[52px]">
               Your Manufacturing <span className="text-blue-600">Academy.</span>
             </h1>
 
@@ -357,7 +357,7 @@ function YOA() {
               {featuredPaths.map(({ tag, title, imageClass }) => (
                 <article key={title} className="flex flex-col gap-3">
                   <div className={`aspect-video rounded-2xl bg-gradient-to-br ${imageClass}`} />
-                  <span className="text-xs font-semibold uppercase tracking-widest text-blue-600">
+                  <span className="text-sm font-medium tracking-normal text-blue-600">
                     {tag}
                   </span>
                   <h3 className="text-base font-semibold leading-snug text-slate-900">{title}</h3>

@@ -139,7 +139,7 @@ function Academy() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Academy by HappyZero</SectionLabel>
 
-          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             From Knowledge to <span className="text-[#FF6A00]">Capability.</span>
           </h1>
 
@@ -307,7 +307,7 @@ function Academy() {
               <article key={title} className="flex flex-col gap-3">
                 <div className={`relative aspect-video rounded-2xl bg-gradient-to-br ${imageClass}`}>
                   {tag && (
-                    <span className="absolute left-3 top-3 rounded-full bg-[#FF6A00] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-white">
+                    <span className="absolute left-3 top-3 rounded-full bg-[#FF6A00] px-2.5 py-1 text-[10px] font-semibold tracking-normal text-white">
                       {tag}
                     </span>
                   )}
@@ -359,7 +359,7 @@ function Academy() {
                   </div>
 
                   <div className="sm:w-40">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                    <p className="text-sm font-medium tracking-normal text-neutral-400">
                       Your Progress
                     </p>
                     <p className="text-2xl font-extrabold text-[#FF6A00]">75%</p>

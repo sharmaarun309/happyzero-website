@@ -130,7 +130,7 @@ function Talent() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Talent by HappyZero</SectionLabel>
 
-          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             People Excellence <span className="text-emerald-600">Before</span> Manufacturing
             Excellence.
           </h1>
@@ -341,7 +341,7 @@ function Talent() {
                   </div>
 
                   <div className="flex-1">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                    <p className="text-sm font-medium tracking-normal text-neutral-400">
                       Critical Gaps
                     </p>
                     <ul className="mt-2 space-y-1.5">
@@ -357,7 +357,7 @@ function Talent() {
 
                 <div className="mt-6">
                   <div className="flex items-center justify-between">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                    <p className="text-sm font-medium tracking-normal text-neutral-400">
                       Capability by Department
                     </p>
                     <div className="flex items-center gap-3 text-[11px] text-neutral-500">

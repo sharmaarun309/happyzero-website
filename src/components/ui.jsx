@@ -4,7 +4,7 @@ import { ArrowRightIcon } from './icons'
 export function SectionLabel({ children, align = 'left', className = '' }) {
   return (
     <p
-      className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-neutral-500 ${
+      className={`flex items-center gap-2 text-sm font-medium tracking-normal text-neutral-500 ${
         align === 'right' ? 'justify-end' : ''
       } ${className}`}
     >

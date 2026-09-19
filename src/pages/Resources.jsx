@@ -136,7 +136,7 @@ function Resources() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Resources</SectionLabel>
 
-          <h1 className="mt-4 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             Ideas for a Better <span className="text-[#FF6A00]">Tomorrow.</span>
           </h1>
 
@@ -217,7 +217,7 @@ function Resources() {
           <div className="mt-8 grid gap-5 lg:grid-cols-2">
             <div className="flex flex-col justify-between gap-6 rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 p-8">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-widest text-white/60">
+                <span className="text-sm font-medium tracking-normal text-white/60">
                   Guide
                 </span>
                 <h3 className="mt-3 text-2xl font-bold leading-snug text-white">
@@ -242,7 +242,7 @@ function Resources() {
               {featuredSide.map(({ tag, tagClass, title, copy, imageClass }) => (
                 <div key={title} className="flex items-center gap-4 rounded-2xl border border-black/5 bg-white p-5">
                   <div className="flex-1">
-                    <span className={`text-xs font-semibold uppercase tracking-widest ${tagClass}`}>
+                    <span className={`text-sm font-medium tracking-normal ${tagClass}`}>
                       {tag}
                     </span>
                     <h3 className="mt-2 text-base font-bold leading-snug text-[#0A0A0A]">
@@ -270,7 +270,7 @@ function Resources() {
             {latestResources.map(({ tag, title, copy, action, imageClass }) => (
               <article key={title} className="flex flex-col gap-3">
                 <div className={`relative aspect-video rounded-2xl bg-gradient-to-br ${imageClass}`}>
-                  <span className="absolute left-3 top-3 rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-neutral-600 shadow-sm">
+                  <span className="absolute left-3 top-3 rounded-full bg-white px-2.5 py-1 text-[10px] font-semibold tracking-normal text-neutral-600 shadow-sm">
                     {tag}
                   </span>
                 </div>
@@ -353,7 +353,7 @@ function Resources() {
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {productConnections.map(({ tag, title, copy, cta, to, Icon, iconClass }) => (
               <div key={title} className="flex flex-col gap-4 rounded-2xl border border-black/5 bg-white p-6">
-                <span className="text-xs font-semibold uppercase tracking-widest text-neutral-400">
+                <span className="text-sm font-medium tracking-normal text-neutral-400">
                   {tag}
                 </span>
                 <h3 className="text-base font-bold leading-snug text-[#0A0A0A]">{title}</h3>

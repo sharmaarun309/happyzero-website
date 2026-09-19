@@ -48,7 +48,7 @@ function Industries() {
     <section className="px-5 py-14 md:px-8 md:py-20">
       <div className="mx-auto max-w-6xl">
         <p className="text-xs font-semibold text-[#FF6A00]">Industries</p>
-        <h1 className="mt-3 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+        <h1 className="mt-3 max-w-xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
           Built for manufacturing.
         </h1>
         <p className="mt-5 max-w-xl text-base text-neutral-600">

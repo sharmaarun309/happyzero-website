@@ -219,7 +219,7 @@ function Contact() {
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
               <SectionLabel>Contact HappyZero</SectionLabel>
-              <h1 className="mt-4 text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+              <h1 className="mt-4 text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
                 Let&rsquo;s Build a Stronger <span className="text-[#FF6A00]">Tomorrow.</span>
               </h1>
               <p className="mt-5 max-w-md text-base text-neutral-600">

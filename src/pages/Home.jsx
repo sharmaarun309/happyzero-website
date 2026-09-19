@@ -82,7 +82,7 @@ function Home() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Manufacturing a Brighter Tomorrow</SectionLabel>
 
-          <h1 className="mt-4 text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[56px]">
+          <h1 className="mt-4 text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[56px]">
             Human + AI.
             <br />
             <span className="text-[#FF6A00]">Better Manufacturing.</span>
@@ -153,7 +153,7 @@ function Home() {
       {/* Trusted by */}
       <section className="px-5 py-10 md:px-8">
         <div className="mx-auto max-w-6xl">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-neutral-500">
+          <p className="text-center text-sm font-medium tracking-normal text-neutral-500">
             Trusted by forward-thinking manufacturers
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -258,7 +258,7 @@ function Home() {
           </div>
 
           <div className="flex items-start gap-6 md:flex-col md:items-end md:text-right">
-            <ul className="space-y-2 text-xs font-semibold uppercase tracking-widest text-white/50">
+            <ul className="space-y-2 text-sm font-medium tracking-normal text-white/50">
               {futurePillars.map((pillar) => (
                 <li key={pillar}>{pillar}</li>
               ))}
@@ -287,7 +287,7 @@ function Home() {
             {resourceCards.map(({ tag, tagClass, title, imageClass }) => (
               <article key={title} className="flex flex-col gap-3">
                 <div className={`aspect-video rounded-2xl ${imageClass}`} />
-                <span className={`text-xs font-semibold uppercase tracking-widest ${tagClass}`}>
+                <span className={`text-sm font-medium tracking-normal ${tagClass}`}>
                   {tag}
                 </span>
                 <h3 className="text-base font-semibold leading-snug text-[#0A0A0A]">

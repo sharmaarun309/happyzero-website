@@ -128,7 +128,7 @@ function DigitalQMS() {
         <div className="mx-auto max-w-6xl">
           <SectionLabel>Digital QMS by HappyZero</SectionLabel>
 
-          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-tight text-[#0A0A0A] md:text-[52px]">
+          <h1 className="mt-4 max-w-2xl text-[40px] font-extrabold leading-[1.05] tracking-[-0.02em] text-[#0A0A0A] md:text-[52px]">
             Simplify.
             <br />
             <span className="text-sky-600">Comply.</span>
@@ -283,7 +283,7 @@ function DigitalQMS() {
 
                 <div className="mt-6 grid gap-6 sm:grid-cols-2">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                    <p className="text-sm font-medium tracking-normal text-neutral-400">
                       Compliance Status
                     </p>
                     <div className="mt-3 flex items-center gap-4">
@@ -311,7 +311,7 @@ function DigitalQMS() {
                   </div>
 
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
+                    <p className="text-sm font-medium tracking-normal text-neutral-400">
                       CAPA by Category
                     </p>
                     <div className="mt-4 flex items-end justify-between gap-2">
@@ -382,7 +382,7 @@ function DigitalQMS() {
             {useCases.map(({ tag, copy, imageClass }) => (
               <article key={tag} className="flex flex-col gap-3">
                 <div className={`aspect-square rounded-2xl bg-gradient-to-br ${imageClass}`} />
-                <span className="text-xs font-semibold uppercase tracking-widest text-sky-600">
+                <span className="text-sm font-medium tracking-normal text-sky-600">
                   {tag}
                 </span>
                 <p className="text-sm font-semibold leading-snug text-[#0A0A0A]">{copy}</p>
@@ -449,7 +449,7 @@ function DigitalQMS() {
               <div className="max-w-xl">
                 <div className="flex items-center gap-2">
                   <SectionLabel>What&rsquo;s Next</SectionLabel>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-600">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-semibold tracking-normal text-sky-600">
                     <SparkleIcon width={12} height={12} strokeWidth={2} />
                     On the Roadmap
                   </span>
