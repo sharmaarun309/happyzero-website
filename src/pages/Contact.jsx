@@ -27,6 +27,10 @@ const heroPoints = [
 ]
 
 const helpOptions = [
+  'Skill Assessment & Gap Identification',
+  'In-house Training & Capability Development',
+  'IMS / QMS Gap Analysis & Implementation',
+  'QMS & Internal Audit Outsourcing',
   'Talent — Skills Intelligence',
   'Academy — Capability Development',
   'Digital QMS',
@@ -40,11 +44,14 @@ const helpOptions = [
 // matching option text above. Add an entry here whenever a new CTA links in
 // with a service param.
 const serviceParamToOption = {
+  'skill-assessment': 'Skill Assessment & Gap Identification',
+  training: 'In-house Training & Capability Development',
+  'gap-analysis': 'IMS / QMS Gap Analysis & Implementation',
+  'audit-outsourcing': 'QMS & Internal Audit Outsourcing',
   talent: 'Talent — Skills Intelligence',
   academy: 'Academy — Capability Development',
   'digital-qms': 'Digital QMS',
   'manufacturing-quality': 'Manufacturing Quality',
-  'skill-assessment': 'Skill Assessment',
   'ai-digital-transformation': 'AI & Digital Transformation',
 }
 
