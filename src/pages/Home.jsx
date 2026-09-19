@@ -6,12 +6,12 @@ import {
   GearIcon,
   PersonAddIcon,
   PersonIcon,
-  PlayIcon,
   QmsIcon,
   SparkleIcon,
   SunIcon,
   TalentIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { ArrowCircleButton, ArrowLink, SectionLabel } from '../components/ui'
 
 const valueStrip = [
@@ -94,7 +94,7 @@ function Home() {
             future-ready organization.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-6">
+          <div className="mt-7">
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-[#FF6A00] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e65f00]"
@@ -102,32 +102,19 @@ function Home() {
               Book a Call
               <ArrowRightIcon width={16} height={16} strokeWidth={2.2} />
             </Link>
-
-            <button
-              type="button"
-              className="inline-flex items-center gap-3 text-sm font-semibold text-[#0A0A0A]"
-            >
-              <PlayIcon width={38} height={38} strokeWidth={1.5} />
-              <span className="flex flex-col items-start leading-tight">
-                Watch Our Story
-                <span className="text-xs font-normal text-neutral-500">
-                  2 min
-                </span>
-              </span>
-            </button>
           </div>
 
           <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 p-8 md:p-12">
+            <PhotoSlot
+              src="images/pages/home-hero.webp"
+              alt="Manufacturing professional on a shop floor"
+              fallbackIcon={
+                <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+              }
+            />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_30%,rgba(255,106,0,0.18),transparent_60%)]" />
             <div className="relative flex flex-col justify-between gap-8 md:flex-row md:items-end">
-              <div className="flex h-48 items-end md:h-64">
-                <PersonIcon
-                  width={72}
-                  height={72}
-                  strokeWidth={1.2}
-                  className="text-white/70"
-                />
-              </div>
+              <div className="flex h-48 items-end md:h-64" />
               <div className="text-right text-sm font-medium leading-relaxed text-white/80">
                 <p>Better People.</p>
                 <p>Better Processes.</p>

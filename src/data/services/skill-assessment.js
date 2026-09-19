@@ -24,7 +24,8 @@ export const skillAssessment = {
     ctaLabel: 'Talk to an expert',
     ctaTo: contactHref,
     imageSrc: `${import.meta.env.BASE_URL}images/services/skill-assessment-hero.webp`,
-    imageAlt: 'Skill Assessment & Gap Identification',
+    imageAlt: 'Supervisor and operator reviewing a machine on a shop floor',
+    imagePosition: 'center 20%',
   },
 
   intro: {

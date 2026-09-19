@@ -19,7 +19,8 @@ export const gapAnalysis = {
     ctaLabel: 'Talk to an expert',
     ctaTo: contactHref,
     imageSrc: `${import.meta.env.BASE_URL}images/services/gap-analysis-hero.webp`,
-    imageAlt: 'IMS / QMS Gap Analysis & Implementation',
+    imageAlt: 'Two professionals reviewing process flow charts in a plant office',
+    imagePosition: 'center 40%',
   },
 
   standards: {

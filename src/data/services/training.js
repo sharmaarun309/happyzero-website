@@ -24,7 +24,8 @@ export const training = {
     ctaLabel: 'Talk to an expert',
     ctaTo: contactHref,
     imageSrc: `${import.meta.env.BASE_URL}images/services/training-hero.webp`,
-    imageAlt: 'In-house Training & Capability Development',
+    imageAlt: 'Trainer showing a machined part to a group during a hands-on session',
+    imagePosition: 'center 12%',
   },
 
   intro: {

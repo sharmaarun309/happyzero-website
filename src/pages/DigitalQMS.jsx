@@ -9,7 +9,6 @@ import {
   GearIcon,
   PersonAddIcon,
   PersonIcon,
-  PlayIcon,
   QmsIcon,
   RefreshIcon,
   SearchScopeIcon,
@@ -17,6 +16,7 @@ import {
   SparkleIcon,
   TargetIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { ArrowLink, SectionLabel } from '../components/ui'
 
 const heroStrip = [
@@ -140,24 +140,21 @@ function DigitalQMS() {
             A modern quality management system built for manufacturing.
           </p>
 
-          <div className="mt-7 flex flex-wrap items-center gap-6">
+          <div className="mt-7">
             <ExploreQmsButton />
-            <button
-              type="button"
-              className="inline-flex items-center gap-3 text-sm font-semibold text-[#0A0A0A]"
-            >
-              <PlayIcon width={32} height={32} strokeWidth={1.5} />
-              <span className="flex flex-col items-start leading-tight">
-                Watch Overview
-                <span className="text-xs font-normal text-neutral-500">2 min</span>
-              </span>
-            </button>
           </div>
 
           <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-sky-950">
+            <PhotoSlot
+              src="images/pages/digital-qms-hero.webp"
+              alt="Quality engineer reviewing documents at a workstation"
+              position="center 10%"
+              fallbackIcon={
+                <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+              }
+            />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(56,189,248,0.22),transparent_60%)]" />
-            <div className="relative flex h-64 items-end justify-between p-8 md:h-80 md:p-12">
-              <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+            <div className="relative flex h-64 items-end justify-end p-8 md:h-[26rem] md:p-12">
               <p className="max-w-[200px] text-right font-serif text-lg italic leading-snug text-white/80">
                 Quality Built for What&rsquo;s Next.
               </p>
@@ -494,7 +491,7 @@ function DigitalQMS() {
                 See how Digital QMS can help you simplify, comply and
                 improve.
               </p>
-              <div className="mt-7 flex flex-wrap items-center gap-6">
+              <div className="mt-7">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-[#FF6A00] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#e65f00]"
@@ -502,16 +499,6 @@ function DigitalQMS() {
                   Book a Capability Conversation
                   <ArrowRightIcon width={16} height={16} strokeWidth={2.2} />
                 </Link>
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-3 text-sm font-semibold text-white"
-                >
-                  <PlayIcon width={32} height={32} strokeWidth={1.5} />
-                  <span className="flex flex-col items-start leading-tight">
-                    See It in Action
-                    <span className="text-xs font-normal text-white/60">2 min</span>
-                  </span>
-                </button>
               </div>
             </div>
 

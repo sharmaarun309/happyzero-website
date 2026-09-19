@@ -14,6 +14,7 @@ import {
   WrenchIcon,
   YoaIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { ArrowLink, SectionLabel } from '../components/ui'
 
 const heroStrip = [
@@ -132,9 +133,16 @@ function Services() {
           </div>
 
           <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
+            <PhotoSlot
+              src="images/pages/services-hero.webp"
+              alt="Quality specialist reviewing a process with a production operator"
+              position="center 20%"
+              fallbackIcon={
+                <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+              }
+            />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,106,0,0.2),transparent_60%)]" />
-            <div className="relative flex h-64 items-end justify-between p-8 md:h-80 md:p-12">
-              <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+            <div className="relative flex h-64 items-end justify-end p-8 md:h-[26rem] md:p-12">
               <p className="max-w-[200px] text-right font-serif text-lg italic leading-snug text-white/80">
                 Your Manufacturing Partner.
               </p>

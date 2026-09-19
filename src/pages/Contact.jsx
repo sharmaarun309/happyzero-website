@@ -17,6 +17,7 @@ import {
   PhoneIcon,
   PinIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { SectionLabel } from '../components/ui'
 
 const heroPoints = [
@@ -308,6 +309,16 @@ function Contact() {
       {/* Let's Build Together */}
       <section className="px-5 py-10 md:px-8">
         <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
+          <PhotoSlot
+            src="images/pages/contact-hero.webp"
+            alt="Manufacturing professionals in a meeting room conversation"
+            position="center 25%"
+            fallbackIcon={
+              <PersonIcon width={56} height={56} strokeWidth={1.2} className="text-white/60" />
+            }
+            fallbackAlign="right"
+            scrim="left"
+          />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,106,0,0.2),transparent_60%)]" />
           <div className="relative flex flex-col justify-between gap-8 p-8 md:flex-row md:items-center md:p-12">
             <div className="max-w-lg">
@@ -333,7 +344,6 @@ function Contact() {
             </div>
 
             <div className="flex items-end justify-end gap-4">
-              <PersonIcon width={56} height={56} strokeWidth={1.2} className="text-white/60" />
               <p className="font-serif text-lg italic leading-snug text-white/80">
                 Conversations
                 <br />today.

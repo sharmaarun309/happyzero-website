@@ -14,7 +14,6 @@ import {
   GearIcon,
   PersonAddIcon,
   PersonIcon,
-  PlayIcon,
   QmsIcon,
   RefreshIcon,
   SearchScopeIcon,
@@ -151,15 +150,8 @@ function YOA() {
               organization and supply chain.
             </p>
 
-            <div className="mt-7 flex flex-wrap items-center gap-6">
+            <div className="mt-7">
               <DemoButton />
-              <button type="button" className="inline-flex items-center gap-3 text-sm font-semibold text-slate-900">
-                <PlayIcon width={32} height={32} strokeWidth={1.5} className="text-slate-700" />
-                <span className="flex flex-col items-start leading-tight">
-                  Watch Overview
-                  <span className="text-xs font-normal text-slate-500">2 min</span>
-                </span>
-              </button>
             </div>
 
             <div className="mt-12">

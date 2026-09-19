@@ -15,6 +15,7 @@ import {
   TargetIcon,
   ToolboxIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { ArrowLink, SectionLabel } from '../components/ui'
 
 const heroStats = [
@@ -146,9 +147,16 @@ function Talent() {
 
           <div className="relative mt-10">
             <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-950 via-neutral-900 to-neutral-900">
+              <PhotoSlot
+                src="images/pages/talent-hero.webp"
+                alt="Production operator working at an assembly station"
+                position="center 8%"
+                fallbackIcon={
+                  <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+                }
+              />
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(16,185,129,0.25),transparent_60%)]" />
-              <div className="relative flex h-64 items-end justify-between p-8 md:h-80 md:p-12">
-                <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+              <div className="relative flex h-64 items-end justify-end p-8 md:h-[26rem] md:p-12">
                 <p className="max-w-[220px] text-right font-serif text-lg italic leading-snug text-white/80">
                   Skilled People. Stronger Manufacturing.
                 </p>

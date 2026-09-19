@@ -15,6 +15,7 @@ import {
   TruckIcon,
   XCircleIcon,
 } from '../components/icons'
+import PhotoSlot from '../components/PhotoSlot'
 import { SectionLabel } from '../components/ui'
 
 const sevenWastes = [
@@ -67,9 +68,16 @@ function About() {
           </div>
 
           <div className="relative mt-10 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
+            <PhotoSlot
+              src="images/pages/about-hero.webp"
+              alt="Manufacturing professionals talking on a factory floor"
+              position="center 20%"
+              fallbackIcon={
+                <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+              }
+            />
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,106,0,0.2),transparent_60%)]" />
-            <div className="relative flex h-64 items-end justify-between p-8 md:h-80 md:p-12">
-              <PersonIcon width={72} height={72} strokeWidth={1.2} className="text-white/70" />
+            <div className="relative flex h-64 items-end justify-end p-8 md:h-[26rem] md:p-12">
               <div className="text-right font-serif text-lg italic leading-snug text-white/80">
                 <p>People</p>
                 <p>Power</p>

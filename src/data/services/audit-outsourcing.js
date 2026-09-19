@@ -20,7 +20,8 @@ export const auditOutsourcing = {
     ctaLabel: 'Talk to an expert',
     ctaTo: contactHref,
     imageSrc: `${import.meta.env.BASE_URL}images/services/audit-outsourcing-hero.webp`,
-    imageAlt: 'QMS & Internal Audit Outsourcing',
+    imageAlt: 'Auditor with a clipboard beside a production line',
+    imagePosition: 'center 12%',
   },
 
   intro: {

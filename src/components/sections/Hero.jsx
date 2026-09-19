@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom'
 import { ArrowRightIcon } from '../icons'
 import { SectionLabel } from '../ui'
 
-function Hero({ eyebrow, title, description, ctaLabel, ctaTo, imageSrc, imageAlt = '' }) {
+function Hero({
+  eyebrow,
+  title,
+  description,
+  ctaLabel,
+  ctaTo,
+  imageSrc,
+  imageAlt = '',
+  imagePosition = 'center',
+}) {
   const [imageFailed, setImageFailed] = useState(false)
 
   return (
@@ -27,7 +36,7 @@ function Hero({ eyebrow, title, description, ctaLabel, ctaTo, imageSrc, imageAlt
           </Link>
         </div>
 
-        <div className="relative mt-10 h-64 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 md:h-80">
+        <div className="relative mt-10 h-64 overflow-hidden rounded-3xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 md:h-[26rem]">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_25%,rgba(255,106,0,0.2),transparent_60%)]" />
           {imageSrc && !imageFailed && (
             <img
@@ -35,6 +44,7 @@ function Hero({ eyebrow, title, description, ctaLabel, ctaTo, imageSrc, imageAlt
               alt={imageAlt}
               onError={() => setImageFailed(true)}
               className="absolute inset-0 h-full w-full object-cover"
+              style={{ objectPosition: imagePosition }}
             />
           )}
         </div>
