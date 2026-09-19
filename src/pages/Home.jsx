@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import {
-  AcademyIcon,
   ArrowRightIcon,
   BarChartIcon,
   DocumentIcon,
@@ -33,15 +32,6 @@ const softwareCards = [
     Icon: TalentIcon,
     cardClass: 'bg-emerald-50',
     iconClass: 'bg-emerald-100 text-emerald-600',
-  },
-  {
-    name: 'Academy',
-    subtitle: 'Capability Development',
-    copy: 'Turn manufacturing knowledge into practical capability.',
-    to: '/academy',
-    Icon: AcademyIcon,
-    cardClass: 'bg-orange-50',
-    iconClass: 'bg-orange-100 text-[#FF6A00]',
   },
   {
     name: 'Digital QMS',

@@ -5,6 +5,8 @@ import Talent from './pages/Talent'
 import Academy from './pages/Academy'
 import DigitalQMS from './pages/DigitalQMS'
 import Services from './pages/Services'
+import Industries from './pages/Industries'
+import IndustriesAutomotive from './pages/IndustriesAutomotive'
 import About from './pages/About'
 import Resources from './pages/Resources'
 import Contact from './pages/Contact'
@@ -21,6 +23,8 @@ function App() {
           <Route path="academy" element={<Academy />} />
           <Route path="digital-qms" element={<DigitalQMS />} />
           <Route path="services" element={<Services />} />
+          <Route path="industries" element={<Industries />} />
+          <Route path="industries/automotive" element={<IndustriesAutomotive />} />
           <Route path="about" element={<About />} />
           <Route path="resources" element={<Resources />} />
           <Route path="contact" element={<Contact />} />

@@ -1,38 +1,28 @@
 import { Link } from 'react-router-dom'
+import { aboutLink, resourcesPanel, servicesPanel, softwareItems } from '../data/nav'
 
+// Software, Services and Resources columns are derived from the same
+// src/data/nav.ts used by the header and mobile menu, so order/labels stay
+// in sync everywhere. Company is footer-only chrome, not part of that data.
 const footerColumns = [
   {
     heading: 'Software',
-    links: [
-      { label: 'Talent', to: '/talent' },
-      { label: 'Academy', to: '/academy' },
-      { label: 'YOA', to: '/yoa' },
-      { label: 'Digital QMS', to: '/digital-qms' },
-    ],
+    links: softwareItems.map(({ name, to }) => ({ label: name, to })),
   },
   {
     heading: 'Services',
-    links: [
-      { label: 'QMS Outsourcing', to: '/services' },
-      { label: 'Gap Analysis & Implementation', to: '/services' },
-      { label: 'Training & Capability Development', to: '/services' },
-      { label: 'Skill Assessment', to: '/services' },
-    ],
+    links: servicesPanel.items.map(({ name, to }) => ({ label: name, to })),
   },
   {
     heading: 'Company',
     links: [
-      { label: 'About', to: '/about' },
+      { label: aboutLink.label, to: aboutLink.to },
       { label: 'Contact', to: '/contact' },
     ],
   },
   {
     heading: 'Resources',
-    links: [
-      { label: 'Blog', to: '/resources' },
-      { label: 'Guides', to: '/resources' },
-      { label: 'Case Studies', to: '/resources' },
-    ],
+    links: resourcesPanel.items.map(({ name, to }) => ({ label: name, to })),
   },
 ]
 

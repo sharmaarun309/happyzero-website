@@ -3,10 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 import {
   academyLink,
   aboutLink,
+  industriesPanel,
   resourcesPanel,
   servicesPanel,
   softwareItems,
-} from './navData'
+} from '../data/nav'
 import { navResources } from '../data/resources'
 import {
   ArrowRightIcon,
@@ -47,13 +48,14 @@ function BookACallButton({ className = '' }) {
   )
 }
 
-function AcademyExternalLink({ className = '', showIcon = false, onClick }) {
+function AcademyExternalLink({ className = '', showIcon = false, onClick, onMouseEnter }) {
   return (
     <a
       href={academyLink.href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
       className={className}
     >
       {academyLink.label}
@@ -139,8 +141,9 @@ function DesktopSoftwareDropdown({ onMouseEnterOther }) {
   )
 }
 
-// Desktop trigger for the Services / Resources mega-panels: a top-level label
-// with a chevron and an orange underline while its panel is open.
+// Desktop trigger for the Services / Industries / Resources mega-panels: a
+// top-level label with a chevron and an orange underline while its panel is
+// open.
 function MegaMenuTrigger({ label, active, onToggle, onMouseEnter }) {
   return (
     <button
@@ -168,24 +171,62 @@ function MegaMenuTrigger({ label, active, onToggle, onMouseEnter }) {
   )
 }
 
+// A single row inside a mega-panel's items list. Renders as a link normally;
+// renders as a non-interactive, aria-disabled row with a small badge (e.g.
+// "Coming soon") when the item has no destination yet.
+function PanelItemRow({ name, subtitle, to, Icon, disabled, badge, onNavigate }) {
+  const body = (
+    <>
+      <span
+        className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${
+          disabled ? 'bg-neutral-100/70 text-neutral-400' : 'bg-neutral-100 text-neutral-600'
+        }`}
+      >
+        <Icon width={16} height={16} strokeWidth={1.8} />
+      </span>
+      <span className="flex flex-1 flex-col">
+        <span className="flex items-center gap-2">
+          <span
+            className={`text-sm font-semibold ${disabled ? 'text-neutral-400' : 'text-[#0A0A0A]'}`}
+          >
+            {name}
+          </span>
+          {badge && (
+            <span className="rounded-full bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-500">
+              {badge}
+            </span>
+          )}
+        </span>
+        <span className="text-xs text-neutral-500">{subtitle}</span>
+      </span>
+    </>
+  )
+
+  if (disabled) {
+    return (
+      <div aria-disabled="true" className="flex items-start gap-3 px-3 py-3.5">
+        {body}
+      </div>
+    )
+  }
+
+  return (
+    <Link
+      to={to}
+      onClick={onNavigate}
+      className="flex items-start gap-3 px-3 py-3.5 transition-colors hover:bg-black/[0.03]"
+    >
+      {body}
+    </Link>
+  )
+}
+
 function PanelItemsList({ items, onNavigate }) {
   return (
     <ul className="divide-y divide-black/5">
-      {items.map(({ name, subtitle, to, Icon }) => (
-        <li key={name}>
-          <Link
-            to={to}
-            onClick={onNavigate}
-            className="flex items-start gap-3 px-3 py-3.5 transition-colors hover:bg-black/[0.03]"
-          >
-            <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-neutral-100 text-neutral-600">
-              <Icon width={16} height={16} strokeWidth={1.8} />
-            </span>
-            <span className="flex flex-col">
-              <span className="text-sm font-semibold text-[#0A0A0A]">{name}</span>
-              <span className="text-xs text-neutral-500">{subtitle}</span>
-            </span>
-          </Link>
+      {items.map((item) => (
+        <li key={item.name}>
+          <PanelItemRow {...item} onNavigate={onNavigate} />
         </li>
       ))}
     </ul>
@@ -193,14 +234,14 @@ function PanelItemsList({ items, onNavigate }) {
 }
 
 function LatestResourcesRow({ onNavigate }) {
+  const published = navResources.filter((item) => item.status === 'published')
+
   return (
     <div className="mt-4 border-t border-black/5 pt-4">
-      <span className="text-xs font-semibold uppercase tracking-wide text-neutral-400">
-        Latest
-      </span>
-      {navResources.length > 0 ? (
+      <span className="text-xs font-semibold text-neutral-400">Latest</span>
+      {published.length > 0 ? (
         <div className="mt-3 grid grid-cols-2 gap-4">
-          {navResources.slice(0, 2).map(({ tag, title, to, imageClass }) => (
+          {published.slice(0, 2).map(({ tag, title, to, imageClass }) => (
             <Link
               key={title}
               to={to}
@@ -211,9 +252,7 @@ function LatestResourcesRow({ onNavigate }) {
                 className={`h-12 w-16 shrink-0 rounded-lg bg-gradient-to-br ${imageClass}`}
               />
               <span className="flex flex-col justify-center">
-                <span className="text-[11px] font-semibold uppercase tracking-wide text-[#FF6A00]">
-                  {tag}
-                </span>
+                <span className="text-[11px] font-semibold text-[#FF6A00]">{tag}</span>
                 <span className="text-sm font-medium leading-snug text-[#0A0A0A]">
                   {title}
                 </span>
@@ -237,9 +276,7 @@ function DesktopMegaPanel({ panel, showLatest, onNavigate }) {
       <div className="mx-auto max-w-6xl px-5 py-8 md:px-8">
         <div className="flex gap-10">
           <div className="w-[30%] shrink-0 border-r border-black/5 pr-8">
-            <span className="text-xs font-semibold uppercase tracking-wide text-[#FF6A00]">
-              {panel.eyebrow}
-            </span>
+            <span className="text-xs font-semibold text-[#FF6A00]">{panel.eyebrow}</span>
             <p className="mt-3 text-sm leading-relaxed text-neutral-600">{panel.intro}</p>
             <Link
               to={panel.hubTo}
@@ -260,80 +297,57 @@ function DesktopMegaPanel({ panel, showLatest, onNavigate }) {
   )
 }
 
-function MobileSoftwareAccordion({ onNavigate }) {
-  const [open, setOpen] = useState(true)
-
+// Shared mobile accordion shell. Coordinated by the parent (only one section
+// open at a time) via isOpen/onToggle rather than local state.
+function MobileAccordionSection({ label, isOpen, onToggle, children }) {
   return (
     <div>
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
+        onClick={onToggle}
+        aria-expanded={isOpen}
         className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-base font-semibold ${
-          open ? 'bg-neutral-100 text-[#0A0A0A]' : 'text-[#0A0A0A]'
+          isOpen ? 'bg-neutral-100 text-[#0A0A0A]' : 'text-[#0A0A0A]'
         }`}
       >
-        Software
+        {label}
         <ChevronDownIcon
           width={18}
           height={18}
           strokeWidth={2.2}
-          className={`transition-transform ${open ? 'rotate-180' : ''}`}
+          className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
-      {open && (
-        <div className="mt-1 rounded-xl bg-neutral-50">
-          <SoftwareDropdownPanel onNavigate={onNavigate} />
-        </div>
-      )}
+      {isOpen && <div className="mt-1 rounded-xl bg-neutral-50">{children}</div>}
     </div>
   )
 }
 
-// Mobile accordion for Services / Resources: same 4 items (+ Latest row for
-// Resources) as desktop, minus the eyebrow/intro blurb, plus a "Learn more"
-// link to the hub page since the label itself no longer navigates.
-function MobilePanelAccordion({ panel, showLatest, onNavigate }) {
-  const [open, setOpen] = useState(false)
-
+// Body for the Services / Industries / Resources mobile accordions: the item
+// list (+ Latest row for Resources) and a "Learn more" link to the hub page,
+// since the section header itself only toggles the accordion.
+function MobilePanelBody({ panel, showLatest, onNavigate }) {
   return (
-    <div>
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        data-panel={panel.label}
-        className={`flex w-full items-center justify-between rounded-xl px-3 py-3 text-left text-base font-semibold ${
-          open ? 'bg-neutral-100 text-[#0A0A0A]' : 'text-[#0A0A0A]'
-        }`}
+    <div className="px-2 pb-3 pt-1">
+      <PanelItemsList items={panel.items} onNavigate={onNavigate} />
+      {showLatest && <LatestResourcesRow onNavigate={onNavigate} />}
+      <Link
+        to={panel.hubTo}
+        onClick={onNavigate}
+        className="mt-3 inline-flex items-center gap-1.5 px-3 text-sm font-semibold text-[#FF6A00]"
       >
-        {panel.label}
-        <ChevronDownIcon
-          width={18}
-          height={18}
-          strokeWidth={2.2}
-          className={`transition-transform ${open ? 'rotate-180' : ''}`}
-        />
-      </button>
-      {open && (
-        <div className="mt-1 rounded-xl bg-neutral-50 px-2 pb-3 pt-1">
-          <PanelItemsList items={panel.items} onNavigate={onNavigate} />
-          {showLatest && <LatestResourcesRow onNavigate={onNavigate} />}
-          <Link
-            to={panel.hubTo}
-            onClick={onNavigate}
-            className="mt-3 inline-flex items-center gap-1.5 px-3 text-sm font-semibold text-[#FF6A00]"
-          >
-            Learn more
-            <ArrowRightIcon width={14} height={14} strokeWidth={2.2} />
-          </Link>
-        </div>
-      )}
+        Learn more
+        <ArrowRightIcon width={14} height={14} strokeWidth={2.2} />
+      </Link>
     </div>
   )
 }
 
 function MobileMenu({ onClose }) {
+  const [openSection, setOpenSection] = useState('software')
+  const toggleSection = (key) =>
+    setOpenSection((v) => (v === key ? null : key))
+
   useEffect(() => {
     document.body.style.overflow = 'hidden'
     return () => {
@@ -377,9 +391,29 @@ function MobileMenu({ onClose }) {
           Home
         </NavLink>
 
-        <MobileSoftwareAccordion onNavigate={onClose} />
+        <MobileAccordionSection
+          label="Software"
+          isOpen={openSection === 'software'}
+          onToggle={() => toggleSection('software')}
+        >
+          <SoftwareDropdownPanel onNavigate={onClose} />
+        </MobileAccordionSection>
 
-        <MobilePanelAccordion panel={servicesPanel} showLatest={false} onNavigate={onClose} />
+        <MobileAccordionSection
+          label={servicesPanel.label}
+          isOpen={openSection === 'services'}
+          onToggle={() => toggleSection('services')}
+        >
+          <MobilePanelBody panel={servicesPanel} showLatest={false} onNavigate={onClose} />
+        </MobileAccordionSection>
+
+        <MobileAccordionSection
+          label={industriesPanel.label}
+          isOpen={openSection === 'industries'}
+          onToggle={() => toggleSection('industries')}
+        >
+          <MobilePanelBody panel={industriesPanel} showLatest={false} onNavigate={onClose} />
+        </MobileAccordionSection>
 
         <AcademyExternalLink
           onClick={onClose}
@@ -395,7 +429,13 @@ function MobileMenu({ onClose }) {
           {aboutLink.label}
         </NavLink>
 
-        <MobilePanelAccordion panel={resourcesPanel} showLatest onNavigate={onClose} />
+        <MobileAccordionSection
+          label={resourcesPanel.label}
+          isOpen={openSection === 'resources'}
+          onToggle={() => toggleSection('resources')}
+        >
+          <MobilePanelBody panel={resourcesPanel} showLatest onNavigate={onClose} />
+        </MobileAccordionSection>
       </nav>
 
       <div className="border-t border-black/5 px-5 py-4">
@@ -439,7 +479,7 @@ function Nav() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5 md:px-8">
           <Logo />
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-6 md:flex lg:gap-8">
             <DesktopSoftwareDropdown onMouseEnterOther={closePanel} />
 
             <MegaMenuTrigger
@@ -447,6 +487,13 @@ function Nav() {
               active={activePanel === 'services'}
               onMouseEnter={() => setActivePanel('services')}
               onToggle={() => setActivePanel('services')}
+            />
+
+            <MegaMenuTrigger
+              label={industriesPanel.label}
+              active={activePanel === 'industries'}
+              onMouseEnter={() => setActivePanel('industries')}
+              onToggle={() => setActivePanel('industries')}
             />
 
             <AcademyExternalLink
@@ -488,6 +535,9 @@ function Nav() {
 
         {activePanel === 'services' && (
           <DesktopMegaPanel panel={servicesPanel} showLatest={false} onNavigate={closePanel} />
+        )}
+        {activePanel === 'industries' && (
+          <DesktopMegaPanel panel={industriesPanel} showLatest={false} onNavigate={closePanel} />
         )}
         {activePanel === 'resources' && (
           <DesktopMegaPanel panel={resourcesPanel} showLatest onNavigate={closePanel} />
