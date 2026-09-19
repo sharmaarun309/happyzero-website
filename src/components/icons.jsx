@@ -428,6 +428,16 @@ export function GridIcon(props) {
   )
 }
 
+export function ExternalLinkIcon(props) {
+  return (
+    <svg {...base(props)}>
+      <path d="M10 6.5H6a1.5 1.5 0 0 0-1.5 1.5v10A1.5 1.5 0 0 0 6 19.5h10a1.5 1.5 0 0 0 1.5-1.5v-4" />
+      <path d="M14.5 4.5h5v5" />
+      <line x1="19" y1="5" x2="10.5" y2="13.5" />
+    </svg>
+  )
+}
+
 export function CalendarIcon(props) {
   return (
     <svg {...base(props)}>
