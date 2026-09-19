@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import {
   ArrowRightIcon,
   BarChartIcon,
@@ -34,6 +35,18 @@ const helpOptions = [
   'AI & Digital Transformation',
   'Other',
 ]
+
+// Maps the ?service= query param (set by CTAs elsewhere on the site) to the
+// matching option text above. Add an entry here whenever a new CTA links in
+// with a service param.
+const serviceParamToOption = {
+  talent: 'Talent — Skills Intelligence',
+  academy: 'Academy — Capability Development',
+  'digital-qms': 'Digital QMS',
+  'manufacturing-quality': 'Manufacturing Quality',
+  'skill-assessment': 'Skill Assessment',
+  'ai-digital-transformation': 'AI & Digital Transformation',
+}
 
 const directContact = [
   {
@@ -97,7 +110,7 @@ const faqs = [
   },
 ]
 
-function ContactForm() {
+function ContactForm({ initialService = '' }) {
   return (
     <div className="rounded-2xl border border-black/5 bg-white p-6 shadow-sm md:p-8">
       <h2 className="text-xl font-bold text-[#0A0A0A]">Start the Conversation</h2>
@@ -144,7 +157,7 @@ function ContactForm() {
             What can we help with? <span className="text-[#FF6A00]">*</span>
           </label>
           <select
-            defaultValue=""
+            defaultValue={initialService}
             className="mt-1.5 w-full rounded-lg border border-black/10 bg-white px-4 py-2.5 text-sm text-neutral-600 focus:border-[#FF6A00] focus:outline-none"
           >
             <option value="" disabled>
@@ -211,6 +224,9 @@ function FaqItem({ q, a, Icon }) {
 }
 
 function Contact() {
+  const [searchParams] = useSearchParams()
+  const initialService = serviceParamToOption[searchParams.get('service')] ?? ''
+
   return (
     <>
       {/* Hero + Contact Form */}
@@ -239,7 +255,7 @@ function Contact() {
               </div>
             </div>
 
-            <ContactForm />
+            <ContactForm initialService={initialService} />
           </div>
         </div>
       </section>

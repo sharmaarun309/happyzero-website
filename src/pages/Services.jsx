@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import {
-  AcademyIcon,
   ArrowRightIcon,
   BarChartIcon,
   DocumentIcon,
@@ -13,6 +12,7 @@ import {
   TargetIcon,
   TrophyIcon,
   WrenchIcon,
+  YoaIcon,
 } from '../components/icons'
 import { ArrowLink, SectionLabel } from '../components/ui'
 
@@ -25,28 +25,32 @@ const heroStrip = [
 
 const serviceCards = [
   {
-    name: 'QMS & Internal Audit Outsourcing',
-    copy: 'Experienced auditors to support your internal and customer audits.',
-    Icon: DocumentIcon,
-    imageClass: 'from-orange-200 to-orange-50',
-  },
-  {
-    name: 'IMS / QMS Gap Analysis & Implementation',
-    copy: 'Assess your current system, identify gaps and implement practical solutions.',
-    Icon: GearIcon,
-    imageClass: 'from-neutral-300 to-neutral-100',
+    name: 'Skill Assessment & Gap Identification',
+    copy: 'Identify current capability, find gaps and create development plans.',
+    Icon: BarChartIcon,
+    imageClass: 'from-emerald-200 to-emerald-50',
+    to: '/services/skill-assessment',
   },
   {
     name: 'In-house Training & Capability Development',
     copy: 'Role-based training to build the skills your people need.',
     Icon: PersonIcon,
     imageClass: 'from-sky-200 to-sky-50',
+    to: '/services/training',
   },
   {
-    name: 'Skill Assessment & Gap Identification',
-    copy: 'Identify current capability, find gaps and create development plans.',
-    Icon: BarChartIcon,
-    imageClass: 'from-emerald-200 to-emerald-50',
+    name: 'IMS / QMS Gap Analysis & Implementation',
+    copy: 'Assess your current system, identify gaps and implement practical solutions.',
+    Icon: GearIcon,
+    imageClass: 'from-neutral-300 to-neutral-100',
+    to: '/services/gap-analysis',
+  },
+  {
+    name: 'QMS & Internal Audit Outsourcing',
+    copy: 'Experienced auditors to support your internal and customer audits.',
+    Icon: DocumentIcon,
+    imageClass: 'from-orange-200 to-orange-50',
+    to: '/services/audit-outsourcing',
   },
 ]
 
@@ -60,7 +64,7 @@ const workSteps = [
 const whyHappyZero = [
   { name: 'Real Manufacturing Experience', copy: 'Practical, shop-floor know-how', Icon: TrophyIcon },
   { name: 'Tailored to Your Needs', copy: 'No one-size-fits-all approach', Icon: PersonAddIcon },
-  { name: 'Integrated with Our Software', copy: 'Connects with Talent, Academy and Digital QMS', Icon: TargetIcon },
+  { name: 'Integrated with Our Software', copy: 'Connects with Talent, YOA and Digital QMS', Icon: TargetIcon },
   { name: 'Focus on Lasting Impact', copy: 'Build capability, not dependency', Icon: BarChartIcon },
 ]
 
@@ -75,13 +79,13 @@ const ecosystemCards = [
     iconClass: 'bg-emerald-100 text-emerald-600',
   },
   {
-    name: 'Academy',
+    name: 'YOA',
     subtitle: 'In-house Training & Capability Development',
     copy: 'Build the capability.',
-    to: '/academy',
-    Icon: AcademyIcon,
-    cardClass: 'bg-orange-50',
-    iconClass: 'bg-orange-100 text-[#FF6A00]',
+    to: '/yoa',
+    Icon: YoaIcon,
+    cardClass: 'bg-blue-50',
+    iconClass: 'bg-blue-100 text-blue-900',
   },
   {
     name: 'Digital QMS',
@@ -172,7 +176,7 @@ function Services() {
           </div>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {serviceCards.map(({ name, copy, Icon, imageClass }) => (
+            {serviceCards.map(({ name, copy, Icon, imageClass, to }) => (
               <div key={name} className="flex flex-col gap-4">
                 <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-100 text-[#FF6A00]">
                   <Icon width={20} height={20} strokeWidth={1.8} />
@@ -180,7 +184,7 @@ function Services() {
                 <h3 className="text-base font-bold leading-snug text-[#0A0A0A]">{name}</h3>
                 <div className={`aspect-video rounded-2xl bg-gradient-to-br ${imageClass}`} />
                 <p className="text-sm text-neutral-600">{copy}</p>
-                <ArrowLink to="/services">Learn More</ArrowLink>
+                <ArrowLink to={to}>Learn More</ArrowLink>
               </div>
             ))}
           </div>
