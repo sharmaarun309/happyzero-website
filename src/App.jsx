@@ -13,6 +13,11 @@ import Industries from './pages/Industries'
 import IndustriesAutomotive from './pages/IndustriesAutomotive'
 import About from './pages/About'
 import Resources from './pages/Resources'
+import Blogs from './pages/resources/Blogs'
+import BlogPost from './pages/resources/BlogPost'
+import Brochures from './pages/resources/Brochures'
+import CaseStudies from './pages/resources/CaseStudies'
+import Infographics from './pages/resources/Infographics'
 import Contact from './pages/Contact'
 import YOA from './pages/YOA'
 
@@ -35,6 +40,11 @@ function App() {
           <Route path="industries/automotive" element={<IndustriesAutomotive />} />
           <Route path="about" element={<About />} />
           <Route path="resources" element={<Resources />} />
+          <Route path="resources/blogs" element={<Blogs />} />
+          <Route path="resources/blogs/:slug" element={<BlogPost />} />
+          <Route path="resources/brochures" element={<Brochures />} />
+          <Route path="resources/case-studies" element={<CaseStudies />} />
+          <Route path="resources/infographics" element={<Infographics />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

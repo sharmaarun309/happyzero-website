@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" role="img" aria-labelledby="title desc">
+  <title id="title">The 8th waste: human intelligence</title>
+  <desc id="desc">Manufacturing already works to remove seven wastes: transportation, inventory, motion, waiting, overproduction, overprocessing and defects. The eighth is the waste of human intelligence: knowledge, experience and ideas that are not captured, shared or developed.</desc>
+
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+    .ink { fill: #0A0A0A; }
+    .cream { fill: #FBF9F6; }
+    .orange { fill: #FF6A00; }
+    .muted { fill: #5C5A57; }
+    .dim { fill: rgba(251,249,246,0.75); }
+    .h1 { font-size: 66px; font-weight: 800; letter-spacing: -1.4px; }
+    .h2 { font-size: 46px; font-weight: 700; letter-spacing: -0.9px; }
+    .big { font-size: 96px; font-weight: 800; letter-spacing: -2px; }
+    .lede { font-size: 28px; font-weight: 400; }
+    .body { font-size: 26px; font-weight: 400; }
+    .label { font-size: 22px; font-weight: 500; }
+    .num { font-size: 24px; font-weight: 700; }
+    .waste { font-size: 17px; font-weight: 600; }
+    .mark { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+    .close { font-size: 40px; font-weight: 700; letter-spacing: -0.8px; }
+  </style>
+
+  <rect width="1080" height="1350" fill="#FBF9F6"/>
+
+  <!-- header -->
+  <text x="70" y="96" class="f mark ink">HappyZero</text>
+  <rect x="70" y="128" width="72" height="5" class="orange"/>
+
+  <text x="70" y="216" class="f h1 ink">The <tspan class="orange">8th</tspan> waste</text>
+  <text x="70" y="268" class="f lede muted">Manufacturing has eliminated many forms of waste.</text>
+  <text x="70" y="306" class="f lede muted">We believe there is one more.</text>
+
+  <!-- the seven -->
+  <text x="40" y="392" class="f label muted">The seven manufacturing already knows</text>
+
+  <g>
+    <g>
+      <rect x="40" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="108" y="478" text-anchor="middle" class="f num muted">1</text>
+      <text x="108" y="522" text-anchor="middle" class="f waste ink">Transportation</text>
+    </g>
+    <g>
+      <rect x="184" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="252" y="478" text-anchor="middle" class="f num muted">2</text>
+      <text x="252" y="522" text-anchor="middle" class="f waste ink">Inventory</text>
+    </g>
+    <g>
+      <rect x="328" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="396" y="478" text-anchor="middle" class="f num muted">3</text>
+      <text x="396" y="522" text-anchor="middle" class="f waste ink">Motion</text>
+    </g>
+    <g>
+      <rect x="472" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="540" y="478" text-anchor="middle" class="f num muted">4</text>
+      <text x="540" y="522" text-anchor="middle" class="f waste ink">Waiting</text>
+    </g>
+    <g>
+      <rect x="616" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="684" y="478" text-anchor="middle" class="f num muted">5</text>
+      <text x="684" y="514" text-anchor="middle" class="f waste ink">Over-</text>
+      <text x="684" y="536" text-anchor="middle" class="f waste ink">production</text>
+    </g>
+    <g>
+      <rect x="760" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="828" y="478" text-anchor="middle" class="f num muted">6</text>
+      <text x="828" y="514" text-anchor="middle" class="f waste ink">Over-</text>
+      <text x="828" y="536" text-anchor="middle" class="f waste ink">processing</text>
+    </g>
+    <g>
+      <rect x="904" y="420" width="136" height="150" rx="12" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+      <text x="972" y="478" text-anchor="middle" class="f num muted">7</text>
+      <text x="972" y="522" text-anchor="middle" class="f waste ink">Defects</text>
+    </g>
+  </g>
+
+  <!-- arrow down -->
+  <line x1="540" y1="606" x2="540" y2="656" stroke="#FF6A00" stroke-width="4"/>
+  <polygon points="540,674 528,652 552,652" class="orange"/>
+
+  <!-- the eighth -->
+  <rect x="40" y="700" width="1000" height="330" rx="22" class="ink"/>
+  <rect x="40" y="700" width="10" height="330" class="orange"/>
+
+  <text x="96" y="810" class="f big orange">8</text>
+  <text x="96" y="878" class="f h2 cream">Waste of human intelligence</text>
+  <text x="96" y="936" class="f body dim">Knowledge, experience and ideas that are not</text>
+  <text x="96" y="974" class="f body dim">captured, shared or developed.</text>
+
+  <!-- closing line -->
+  <rect x="40" y="1096" width="72" height="5" class="orange"/>
+  <text x="40" y="1170" class="f close ink">Zero waste of <tspan class="orange">human intelligence.</tspan></text>
+
+  <!-- footer -->
+  <text x="40" y="1294" class="f label muted">happyzero.ai</text>
+</svg>

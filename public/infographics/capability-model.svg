@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350" role="img" aria-labelledby="title desc">
+  <title id="title">Mindset + Skillset + Toolset</title>
+  <desc id="desc">Mindset is how they think and behave. Skillset is what they know and can do. Toolset is what machines, systems and technology they can use. Together they make manufacturing capability, kept current by a loop of assess, develop, apply and improve.</desc>
+
+  <style>
+    .f { font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+    .ink { fill: #0A0A0A; }
+    .cream { fill: #FBF9F6; }
+    .orange { fill: #FF6A00; }
+    .muted { fill: #5C5A57; }
+    .dim { fill: rgba(251,249,246,0.72); }
+    .h1 { font-size: 62px; font-weight: 800; letter-spacing: -1.2px; }
+    .h2 { font-size: 40px; font-weight: 700; letter-spacing: -0.8px; }
+    .h3 { font-size: 34px; font-weight: 700; letter-spacing: -0.5px; }
+    .lede { font-size: 27px; font-weight: 400; }
+    .body { font-size: 23px; font-weight: 400; }
+    .label { font-size: 22px; font-weight: 500; }
+    .chip { font-size: 26px; font-weight: 600; }
+    .mark { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+  </style>
+
+  <rect width="1080" height="1350" fill="#FBF9F6"/>
+
+  <!-- header -->
+  <text x="70" y="96" class="f mark ink">HappyZero</text>
+  <rect x="70" y="128" width="72" height="5" class="orange"/>
+
+  <text x="70" y="212" class="f h1 ink">Mindset <tspan class="orange">+</tspan> Skillset <tspan class="orange">+</tspan> Toolset</text>
+  <text x="70" y="262" class="f lede muted">The three parts of manufacturing capability.</text>
+
+  <!-- three blocks -->
+  <g>
+    <rect x="70" y="330" width="300" height="300" rx="18" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="70" y="330" width="300" height="8" rx="4" class="orange"/>
+    <text x="102" y="412" class="f h3 ink">Mindset</text>
+    <text x="102" y="462" class="f body muted">How they think</text>
+    <text x="102" y="494" class="f body muted">and behave.</text>
+  </g>
+
+  <g>
+    <rect x="390" y="330" width="300" height="300" rx="18" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="390" y="330" width="300" height="8" rx="4" class="orange"/>
+    <text x="422" y="412" class="f h3 ink">Skillset</text>
+    <text x="422" y="462" class="f body muted">What they know</text>
+    <text x="422" y="494" class="f body muted">and can do.</text>
+  </g>
+
+  <g>
+    <rect x="710" y="330" width="300" height="300" rx="18" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <rect x="710" y="330" width="300" height="8" rx="4" class="orange"/>
+    <text x="742" y="412" class="f h3 ink">Toolset</text>
+    <text x="742" y="462" class="f body muted">What machines,</text>
+    <text x="742" y="494" class="f body muted">systems and</text>
+    <text x="742" y="526" class="f body muted">technology they</text>
+    <text x="742" y="558" class="f body muted">can use.</text>
+  </g>
+
+  <!-- arrows down into the capability bar -->
+  <g stroke="#0A0A0A" stroke-width="3">
+    <line x1="220" y1="630" x2="220" y2="690"/>
+    <line x1="540" y1="630" x2="540" y2="690"/>
+    <line x1="860" y1="630" x2="860" y2="690"/>
+  </g>
+  <g class="ink">
+    <polygon points="220,706 210,686 230,686"/>
+    <polygon points="540,706 530,686 550,686"/>
+    <polygon points="860,706 850,686 870,686"/>
+  </g>
+
+  <!-- capability -->
+  <rect x="70" y="722" width="940" height="140" rx="18" class="ink"/>
+  <rect x="70" y="722" width="8" height="140" class="orange"/>
+  <text x="540" y="810" text-anchor="middle" class="f h2 cream">Manufacturing capability</text>
+
+  <!-- loop -->
+  <text x="70" y="950" class="f label muted">Kept current by a loop, not a one-off exercise</text>
+
+  <g>
+    <rect x="70" y="984" width="214" height="96" rx="14" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <text x="177" y="1042" text-anchor="middle" class="f chip ink">Assess</text>
+
+    <rect x="312" y="984" width="214" height="96" rx="14" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <text x="419" y="1042" text-anchor="middle" class="f chip ink">Develop</text>
+
+    <rect x="554" y="984" width="214" height="96" rx="14" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <text x="661" y="1042" text-anchor="middle" class="f chip ink">Apply</text>
+
+    <rect x="796" y="984" width="214" height="96" rx="14" fill="none" stroke="#0A0A0A" stroke-width="2"/>
+    <text x="903" y="1042" text-anchor="middle" class="f chip ink">Improve</text>
+  </g>
+
+  <g stroke="#FF6A00" stroke-width="3">
+    <line x1="284" y1="1032" x2="302" y2="1032"/>
+    <line x1="526" y1="1032" x2="544" y2="1032"/>
+    <line x1="768" y1="1032" x2="786" y2="1032"/>
+  </g>
+  <g class="orange">
+    <polygon points="312,1032 296,1024 296,1040"/>
+    <polygon points="554,1032 538,1024 538,1040"/>
+    <polygon points="796,1032 780,1024 780,1040"/>
+  </g>
+
+  <!-- return arrow -->
+  <path d="M903 1080 L903 1140 L177 1140 L177 1104" fill="none" stroke="#FF6A00" stroke-width="3"/>
+  <polygon points="177,1088 169,1106 185,1106" class="orange"/>
+
+  <!-- footer -->
+  <rect x="70" y="1232" width="72" height="4" class="orange"/>
+  <text x="70" y="1294" class="f label muted">happyzero.ai</text>
+</svg>

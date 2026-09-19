@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HappyZero services overview</title>
+<style>
+  @font-face {
+    font-family: "Inter Tight Variable";
+    src: url("../fonts/inter-tight-latin-wght-normal.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --ink: #0A0A0A;
+    --cream: #FBF9F6;
+    --orange: #FF6A00;
+    --muted: #5C5A57;
+    --rule: rgba(10, 10, 10, 0.12);
+    --rule-light: rgba(251, 249, 246, 0.2);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #E8E5E0;
+    color: var(--ink);
+    font-family: "Inter Tight Variable", Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 { letter-spacing: -0.02em; margin: 0; }
+  p { margin: 0; }
+
+  .print-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(232, 229, 224, 0.92);
+  }
+
+  .print-bar button {
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--orange);
+    border: 0;
+    border-radius: 999px;
+    padding: 10px 22px;
+    cursor: pointer;
+  }
+
+  .sheets { padding: 0 12px 40px; }
+
+  .page {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto 16px;
+    padding: 20mm 18mm;
+    background: var(--cream);
+    box-shadow: 0 10px 30px rgba(10, 10, 10, 0.16);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page--dark { background: var(--ink); color: var(--cream); }
+  .page--dark .item { border-color: var(--rule-light); }
+  .page--dark .item p { color: rgba(251, 249, 246, 0.7); }
+
+  .rule { display: block; width: 44px; height: 3px; background: var(--orange); border: 0; margin: 0; }
+
+  .wordmark { font-size: 13pt; font-weight: 700; letter-spacing: -0.02em; }
+
+  .eyebrow { font-size: 10pt; font-weight: 500; color: var(--muted); }
+  .page--dark .eyebrow { color: rgba(251, 249, 246, 0.6); }
+
+  .cover-title {
+    font-size: 40pt;
+    font-weight: 800;
+    line-height: 1.05;
+    margin-top: 14px;
+    max-width: 14ch;
+  }
+
+  .cover-sub {
+    margin-top: 18px;
+    max-width: 46ch;
+    color: rgba(251, 249, 246, 0.75);
+    font-size: 12pt;
+  }
+
+  .block { margin-top: 28px; }
+
+  h2.section-title { font-size: 24pt; font-weight: 700; line-height: 1.15; margin-top: 12px; }
+  h3 { font-size: 13pt; font-weight: 700; line-height: 1.3; }
+
+  .lede { margin-top: 16px; max-width: 58ch; font-size: 12pt; color: var(--muted); }
+  .page--dark .lede { color: rgba(251, 249, 246, 0.75); }
+
+  .stack { margin-top: 22px; }
+  .stack > * + * { margin-top: 14px; }
+
+  .item { border-top: 1px solid var(--rule); padding-top: 12px; }
+  .item p { margin-top: 5px; color: var(--muted); max-width: 62ch; }
+
+  .steps { display: flex; gap: 10px; margin-top: 16px; }
+  .step { flex: 1; border: 1px solid var(--rule); border-radius: 10px; padding: 12px; }
+  .step span { display: block; font-size: 9.5pt; color: var(--orange); font-weight: 600; }
+  .step strong { display: block; font-size: 12pt; margin-top: 3px; }
+  .step em { display: block; font-style: normal; font-size: 9.5pt; color: var(--muted); margin-top: 4px; }
+
+  .accent { color: var(--orange); }
+  .spacer { flex: 1; }
+
+  .foot {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    font-size: 9.5pt;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+  }
+  .page--dark .foot { border-color: var(--rule-light); color: rgba(251, 249, 246, 0.6); }
+
+  .contact { margin-top: 18px; font-size: 14pt; font-weight: 600; }
+  .contact a { color: inherit; text-decoration: none; display: block; }
+  .contact a + a { margin-top: 6px; }
+
+  @media (max-width: 800px) {
+    .page { width: 100%; height: auto; padding: 28px 22px; }
+    .cover-title { font-size: 30pt; max-width: none; }
+    h2.section-title { font-size: 20pt; }
+    .steps { flex-direction: column; }
+  }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    html, body { background: #fff; }
+    .print-bar { display: none; }
+    .sheets { padding: 0; }
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <button type="button" onclick="window.print()">Print or save as PDF</button>
+</div>
+
+<div class="sheets">
+
+  <section class="page page--dark">
+    <p class="wordmark">HappyZero</p>
+    <div class="spacer"></div>
+    <hr class="rule">
+    <h1 class="cover-title">Manufacturing expertise, <span class="accent">delivered.</span></h1>
+    <p class="cover-sub">
+      Hands-on support to help you strengthen quality, capability and performance,
+      while you build your digital future.
+    </p>
+    <div class="spacer"></div>
+    <div class="foot"><span>Services overview</span><span>happyzero.ai</span></div>
+  </section>
+
+  <section class="page">
+    <p class="wordmark">HappyZero</p>
+    <div class="block">
+      <hr class="rule">
+      <p class="eyebrow" style="margin-top:12px">Who we are</p>
+      <h2 class="section-title">Human + AI. Better manufacturing.</h2>
+      <p class="lede">
+        We combine manufacturing expertise, intelligent software and AI-powered work to
+        help you build a more capable, efficient and future-ready organization.
+      </p>
+      <p class="lede">
+        We exist to help manufacturing organizations unlock the full potential of their
+        people, with the right blend of human expertise, intelligent software and AI.
+      </p>
+      <p class="lede">
+        Manufacturing has always had enormous intelligence, and too much of it stays
+        trapped in people, processes and disconnected systems. We believe AI should not
+        simply make humans work less. It should make human work matter more.
+      </p>
+      <p class="lede">
+        So every engagement starts with people. Expertise first, then the systems and
+        software that let that expertise scale.
+      </p>
+    </div>
+    <div class="spacer"></div>
+    <div class="foot"><span>Who we are</span><span>Page 2</span></div>
+  </section>
+
+  <section class="page">
+    <p class="wordmark">HappyZero</p>
+    <div class="block">
+      <hr class="rule">
+      <p class="eyebrow" style="margin-top:12px">Our services</p>
+      <h2 class="section-title">Practical support for real manufacturing needs.</h2>
+
+      <div class="stack">
+        <div class="item">
+          <h3>Skill Assessment &amp; Gap Identification</h3>
+          <p>
+            Identify current capability, find gaps and create development plans.
+            A structured way to see what your people can do today, find the gaps that
+            matter and plan what to do next.
+          </p>
+        </div>
+        <div class="item">
+          <h3>In-house Training &amp; Capability Development</h3>
+          <p>
+            Role-based, hands-on training delivered at your site or online, built around
+            your real processes and problems, so people practise on the work they
+            actually do.
+          </p>
+        </div>
+        <div class="item">
+          <h3>IMS / QMS Gap Analysis &amp; Implementation</h3>
+          <p>
+            Assess your management system against the standard, find the gaps, and put
+            practical solutions in place that your team can sustain. We work with
+            ISO 9001, IATF 16949, ISO 14001, ISO 45001 and integrated management systems.
+          </p>
+        </div>
+        <div class="item">
+          <h3>QMS &amp; Internal Audit Outsourcing</h3>
+          <p>
+            Qualified auditors to plan, conduct and report your internal and supplier
+            audits, so your team can focus on closing findings.
+          </p>
+        </div>
+      </div>
+
+      <p class="eyebrow" style="margin-top:26px">How we work</p>
+      <div class="steps">
+        <div class="step"><span>01</span><strong>Assess</strong><em>Understand your current state</em></div>
+        <div class="step"><span>02</span><strong>Plan</strong><em>Develop a practical roadmap</em></div>
+        <div class="step"><span>03</span><strong>Implement</strong><em>Put plans into action with you</em></div>
+        <div class="step"><span>04</span><strong>Sustain</strong><em>Support continued improvement</em></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="foot"><span>Our services</span><span>Page 3</span></div>
+  </section>
+
+  <section class="page page--dark">
+    <p class="wordmark">HappyZero</p>
+    <div class="block">
+      <hr class="rule">
+      <p class="eyebrow" style="margin-top:12px">The software ecosystem</p>
+      <h2 class="section-title">From insight to action.</h2>
+
+      <div class="stack">
+        <div class="item">
+          <h3>Talent <span class="accent">&middot;</span> Skills Intelligence</h3>
+          <p>
+            People excellence before manufacturing excellence. Build the capability your
+            people need to deliver zero defect, zero customer complaint and zero delay.
+          </p>
+        </div>
+        <div class="item">
+          <h3>YOA <span class="accent">&middot;</span> Your Own Manufacturing Academy</h3>
+          <p>
+            Build a stronger, more capable workforce, across your organization and your
+            supply chain.
+          </p>
+        </div>
+        <div class="item">
+          <h3>Digital QMS <span class="accent">&middot;</span> Quality Management</h3>
+          <p>
+            Simplify, comply, improve. A modern quality management system built for
+            manufacturing.
+          </p>
+        </div>
+      </div>
+
+      <p class="eyebrow" style="margin-top:30px">Talk to us</p>
+      <div class="contact">
+        <a href="mailto:hello@happyzero.ai">hello@happyzero.ai</a>
+        <a href="https://happyzero.ai">happyzero.ai</a>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="foot"><span>HappyZero</span><span>Page 4</span></div>
+  </section>
+
+</div>
+
+</body>
+</html>
