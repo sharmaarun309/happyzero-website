@@ -20,3 +20,16 @@ Reference screenshots for exact layout/spacing/style: /design/*.png
 - Service names never change
 - Academy is an external link to submastery.com
 - No fake logos, testimonials, statistics, awards, percentages, phone numbers or addresses
+
+## Minimal-code mode (adapted from Ponytail, github.com/DietrichGebert/ponytail)
+Before writing code, stop at the first rung that holds:
+1. Does this need to be built at all?
+2. Does it already exist in this codebase? Reuse the helper, component or pattern.
+3. Does the platform (HTML/CSS/browser API) or an already-installed dependency cover it? Use it.
+4. Can it be one line? Make it one line.
+5. Only then write the minimum code that works.
+
+- Read the task and the code it touches first; the smallest change in the wrong place is a second bug.
+- Bug fix means root cause: grep all callers and fix the shared function once.
+- No unrequested abstractions, new dependencies or boilerplate. Prefer deletion, fewest files.
+- Never cut corners on input validation, data-loss error handling, security, accessibility, or anything explicitly requested.
